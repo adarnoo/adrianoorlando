@@ -1,0 +1,30 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: helvetica;
+  cursor: default;
+  letter-spacing: 2.5px;
+  font-weight: normal;
+  -webkit-text-stroke: 1px;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+a {
+  color: red;
+}
+
+.ao-content-container {
+  position: relative;
+  list-style: none;
+}
+
+.ao-content-container-inner {
+  padding: 10px;
+}
+
+.ao-content-section {
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=default.css.map */

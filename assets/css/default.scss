@@ -1,0 +1,115 @@
+// Responsive breakpoints
+$fs-breakpoint-xxsmall: 320px !default;
+$fs-breakpoint-xsmall: 660px !default;
+$fs-breakpoint-small: 900px !default;
+$fs-breakpoint-medium: 1100px !default;
+$fs-breakpoint-large: 1800px !default;
+
+@mixin mobile {
+  @media only screen and (max-width: $fs-breakpoint-xsmall) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+  @media only screen and (min-width: $fs-breakpoint-xsmall + 1) and (max-width: $fs-breakpoint-small) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media only screen and (min-width: $fs-breakpoint-small + 1) and (max-width: $fs-breakpoint-medium) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $fs-breakpoint-medium + 1) and (max-width: $fs-breakpoint-large) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media only screen and (min-width: $fs-breakpoint-large  + 1) {
+    @content;
+  }
+}
+
+// Inclusive range going up
+@mixin min-tablet-portrait {
+  @media only screen and (min-width: $fs-breakpoint-xsmall + 1) {
+    @content;
+  }
+}
+
+@mixin min-tablet-landscape {
+  @media only screen and (min-width: $fs-breakpoint-small + 1) {
+    @content;
+  }
+}
+
+@mixin min-desktop {
+  @media only screen and (min-width: $fs-breakpoint-large + 1) {
+    @content;
+  }
+}
+
+// Inclusive range going down
+@mixin max-desktop {
+  @media only screen and (max-width: $fs-breakpoint-large) {
+    @content;
+  }
+}
+
+@mixin max-tablet-landscape {
+  @media only screen and (max-width: $fs-breakpoint-medium) {
+    @content;
+  }
+}
+
+@mixin max-tablet-portrait {
+  @media only screen and (max-width: $fs-breakpoint-small) {
+    @content;
+  }
+}
+
+@mixin max-mobile {
+  @media only screen and (max-width: $fs-breakpoint-xsmall) {
+    @content;
+  }
+}
+
+@mixin min-mobile {
+  @media only screen and (max-width: $fs-breakpoint-xxsmall) {
+    @content;
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: helvetica;
+  cursor: default;
+  letter-spacing: 2.5px;
+  font-weight: normal;
+  -webkit-text-stroke: 1px;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+a {
+  color: red;
+}
+
+.ao-content-container {
+  position: relative;
+  list-style: none;
+}
+
+.ao-content-container-inner {
+  padding: 10px;
+}
+
+.ao-content-section {
+  margin-bottom: 20px;
+}
